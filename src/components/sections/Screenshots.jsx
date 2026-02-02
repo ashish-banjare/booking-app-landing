@@ -11,7 +11,7 @@ const Screenshots = () => {
         <div id="carouselExample" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="../../assets/images/hero-image-2.jpg" className="d-block w-100" />
+              {/* <img src="../../assets/images/hero-image-2.jpg" className="d-block w-100" /> */}
             </div>
           </div>
         </div>

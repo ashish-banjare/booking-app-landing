@@ -1,6 +1,6 @@
 const SectionTitle = ({ title, subtitle }) => (
-  <div className="section-title text-center">
-    <h3>{title}</h3>
+  <div className="section_title">
+    <h4 className="title">{title}</h4>
     <p>{subtitle}</p>
   </div>
 );

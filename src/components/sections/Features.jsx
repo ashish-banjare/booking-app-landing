@@ -2,24 +2,64 @@ import SectionTitle from "../Common/SectionTitle.jsx";
 
 const Features = () => {
     return(
-        <section id="features" className="features-area">
-            <div className="container">
-                <SectionTitle
-                    title="App Features"
-                    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                />
+        // <section id="features" className="features-area">
+        //     <div className="container">
+        //         <SectionTitle
+        //             title="App Features"
+        //             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        //         />
 
-                <div className="row">
-                    <div className="col-lg-4">
-                        <div className="single-features">
-                        <i className="lni lni-cog"></i>
-                        <h4>Easy Setup</h4>
-                        <p>Quick and easy installation</p>
+        //         <div className="row">
+        //             <div className="col-lg-4">
+        //                 <div className="single-features">
+        //                 <i className="lni lni-cog"></i>
+        //                 <h4>Easy Setup</h4>
+        //                 <p>Quick and easy installation</p>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </section>
+        <section id="features" className="features_area pt-35 pb-80">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-4 col-md-7 col-sm-8">
+                        <div className="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            <div className="features_icon">
+                                <i className="lni lni-code"></i>
+                            </div>
+                            <div className="features_content">
+                                <h4 className="features_title">Bootstrap</h4>
+                                <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-7 col-sm-8">
+                        <div className="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                            <div className="features_icon">
+                                <i className="lni lni-layers"></i>
+                            </div>
+                            <div className="features_content">
+                                <h4 className="features_title">HTML5</h4>
+                                <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-7 col-sm-8">
+                        <div className="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
+                            <div className="features_icon">
+                                <i className="lni lni-exit-down"></i>
+                            </div>
+                            <div className="features_content">
+                                <h4 className="features_title">Free</h4>
+                                <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     );
 }
 

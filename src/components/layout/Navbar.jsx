@@ -1,35 +1,63 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import logoLight   from '../../assets/images/logo.svg';
+import logoDark   from '../../assets/images/logo-2.svg';
 
-const Navbar = function Navbar() {
-    const [open, setOpen] = useState(false);
+const Navbar = () => {
+
+    const [ isSticky, setIsSticky ] = useState( false );
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 80);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <div className={`header_navbar ${isSticky ? 'sticky' : ''}`}>
             <div className="container">
-                <a className="navbar-brand" href="#">
-                    <img src="/assets/images/logo.svg" alt="logo" />
-                </a>
-            </div>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <nav className="navbar navbar-expand-lg">
+                            <a className="navbar-brand" href="#">
+                                <img src={ isSticky ? logoDark : logoLight  } alt="Logo" />
+                            </a>
+                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="toggler-icon"></span>
+                                <span className="toggler-icon"></span>
+                                <span className="toggler-icon"></span>
+                            </button>
 
-            <button
-                className="navbar-toggler"
-                type="button"
-                onClick = {() => setOpen(!open) }
-            >
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <Console className="log">{open ? "Open" : "Closed"}</Console>
-
-            <div className={`collapse navbar-collapse ${open ? "show" : ""}`}>
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#features">Features</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#pricing">Pricing</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#blog">Blog</a></li>
-                </ul>
-            </div>
-        </nav>
+                            <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" className="navbar-nav ml-auto">
+                                    <li className="nav-item active">
+                                        <a className="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="page-scroll" href="#features">Feature</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="page-scroll" href="#screenshot">Screenshot</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="page-scroll" href="#pricing">Pricing</a>
+                                    </li>                                    
+                                    <li className="nav-item">
+                                        <a className="page-scroll" href="#blog">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div> 
+        </div>
     );
-}
+};
 
 export default Navbar;
