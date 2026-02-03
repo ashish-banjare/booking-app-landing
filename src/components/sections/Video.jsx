@@ -1,3 +1,5 @@
+import ButtonLink from "../Common/ButtonLink";
+
 const Video = () => {
     return (
         <section id="video" className="video_area pt-80 pb-80">
@@ -7,7 +9,8 @@ const Video = () => {
                     <div className="section_title text-center">
                         <h4 className="title">You are using free lite version</h4>
                         <p>Please, purchase full version of the template to get all sections, features and permission to remove footer credits.</p><br />
-                        <a href="#" rel="nofollow" className="main-btn">Purchase Now</a>
+                        <ButtonLink myClass="" text="Purchase Now" href="#" />
+
                     </div> {/* section title */}
                 </div>
             </div> {/* row */}

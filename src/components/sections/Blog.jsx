@@ -1,7 +1,8 @@
-import SectionTitle from "../Common/SectionTitle";
+import BlogItem from "../Common/BlogItem";
 import blogImg1 from "../../assets/images/blog-1.jpg";
 import blogImg2 from "../../assets/images/blog-2.jpg";
 import blogImg3 from "../../assets/images/blog-3.jpg";
+
 const Blog = () => {
   return (
     <section id="blog" className="blog_area pt-80 pb-80">
@@ -10,77 +11,32 @@ const Blog = () => {
                 <div className="col-lg-6">
                     <div className="section_title text-center pb-25">
                         <h4 className="title">From The Blog</h4>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                        <p>Tips, updates, and poolside inspiration to help you make the most of every swim and booking experience.</p>
                     </div> {/* section title */}
                 </div>
             </div> {/* row */}
             <div className="row justify-content-center">
-                <div className="col-lg-4 col-md-8">
-                    <div className="single_blog blog_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style={{visibility: "visible", animationDuration: "1.3s", animationDelay: "0.2s", animationName: "fadeInUp"}}>
-                        <div className="blog_image">
-                            <img src={blogImg1} alt="blog" />
-                        </div>
-                        <div className="blog_content">
-                            <div className="blog_meta d-flex justify-content-between">
-                                <div className="meta_date">
-                                    <span>20 December, 2023</span>
-                                </div>
-                                <div className="meta_like">
-                                    <ul>
-                                        <li><a href="#"><i className="lni lni-comments-alt"></i> 20</a></li>
-                                        <li><a href="#"><i className="lni lni-heart"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 className="blog_title"><a href="#">Unlimited featrues with free updates.</a></h4>
-                            <a href="#" className="main-btn">Read More</a>
-                        </div>
-                    </div> {/* single blog */}
-                </div>
-                <div className="col-lg-4 col-md-8">
-                    <div className="single_blog blog_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s" style={{visibility: "visible", animationDuration: "1.3s", animationDelay: "0.5s", animationName: "fadeInUp"}}>
-                        <div className="blog_image">
-                            <img src={blogImg2} alt="blog" />
-                        </div>
-                        <div className="blog_content">
-                            <div className="blog_meta d-flex justify-content-between">
-                                <div className="meta_date">
-                                    <span>20 December, 2023</span>
-                                </div>
-                                <div className="meta_like">
-                                    <ul>
-                                        <li><a href="#"><i className="lni lni-comments-alt"></i> 20</a></li>
-                                        <li><a href="#"><i className="lni lni-heart"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 className="blog_title"><a href="#">Easy to use and customize the App.</a></h4>
-                            <a href="#" className="main-btn">Read More</a>
-                        </div>
-                    </div> {/* single blog */}
-                </div>
-                <div className="col-lg-4 col-md-8">
-                    <div className="single_blog blog_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s" style={{visibility: "visible", animationDuration: "1.3s", animationDelay: "0.8s", animationName: "fadeInUp"}}>
-                        <div className="blog_image">
-                            <img src={blogImg3} alt="blog" />
-                        </div>
-                        <div className="blog_content">
-                            <div className="blog_meta d-flex justify-content-between">
-                                <div className="meta_date">
-                                    <span>20 December, 2023</span>
-                                </div>
-                                <div className="meta_like">
-                                    <ul>
-                                        <li><a href="#"><i className="lni lni-comments-alt"></i> 20</a></li>
-                                        <li><a href="#"><i className="lni lni-heart"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 className="blog_title"><a href="#">Super fast and strong security.</a></h4>
-                            <a href="#" className="main-btn">Read More</a>
-                        </div>
-                    </div> {/* single blog */}
-                </div>
+               <BlogItem 
+                  blogImg={blogImg1} 
+                  blogTitle="Unlimited featrues with free updates."
+                  blogDate="20 December, 2023"
+                  comments={20}
+                  likes={15}
+               />
+               <BlogItem 
+                  blogImg={blogImg2} 
+                  blogTitle="Easy to use and customize the App."
+                  blogDate="25 January, 2025"
+                  comments={20}
+                  likes={15}
+               />
+               <BlogItem 
+                  blogImg={blogImg3} 
+                  blogTitle="Super fast and strong security."
+                  blogDate="01 February, 2026"
+                  comments={5}
+                  likes={55}
+               />
             </div> {/* row */}
         </div> {/* container */}
     </section>
