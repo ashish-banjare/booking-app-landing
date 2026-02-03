@@ -1,4 +1,20 @@
+import React from "react";
 import SectionTitle from "../Common/SectionTitle.jsx";
+
+import FeaturesContent from "../Common/FeaturesContent.jsx";
+import FeaturesIcon from "../Common/FeaturesIcon.jsx";
+
+import { Lineicons } from "@lineiconshq/react-lineicons";
+import {
+  AirbnbOutlined,
+  BurgerDrinkSolid,
+  BusketBallBulk,
+  Code1Outlined,
+  Layers1Bulk,
+  Download1Bulk
+} from "@lineiconshq/free-icons";
+
+
 
 const Features = () => {
     return(
@@ -25,35 +41,41 @@ const Features = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-4 col-md-7 col-sm-8">
                         <div className="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                            <div className="features_icon">
-                                <i className="lni lni-code"></i>
-                            </div>
-                            <div className="features_content">
-                                <h4 className="features_title">Bootstrap</h4>
-                                <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
-                            </div>
+                            <FeaturesIcon icon={BurgerDrinkSolid} size={50} color="white" width={1.5} />
+                            <FeaturesContent title="Private Pools" subtitle="Swim, float, tan, or host a pool party" />
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-7 col-sm-8">
                         <div className="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                            <div className="features_icon">
-                                <i className="lni lni-layers"></i>
-                            </div>
-                            <div className="features_content">
-                                <h4 className="features_title">HTML5</h4>
-                                <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
-                            </div>
+                            <FeaturesIcon icon={AirbnbOutlined} size={50} color="white" width={1.5} />
+                            <FeaturesContent title="Hot Tubs & Saunas" subtitle="Relax and unwind in our premium hot tubs and saunas" />
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-7 col-sm-8">
                         <div className="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
-                            <div className="features_icon">
-                                <i className="lni lni-exit-down"></i>
-                            </div>
-                            <div className="features_content">
-                                <h4 className="features_title">Free</h4>
-                                <p>Lorem ipsum dolor sit ame consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
-                            </div>
+                            <FeaturesIcon icon={BusketBallBulk} size={50} color="white" width={1.5} />
+                            <FeaturesContent title="Pickleball, Tennis & Sport Courts" subtitle="Pickleball, Tennis & Sport Courts – Play your game, your way" />
+                        </div>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-lg-4 col-md-7 col-sm-8">
+                        <div className="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            <FeaturesIcon icon={Code1Outlined} size={50} color="white" width={1.5} />
+                            <FeaturesContent title="Backyards & Patios" subtitle="Great for BBQs, birthdays, or gatherings" />
+
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-7 col-sm-8">
+                        <div className="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                            <FeaturesIcon icon={Layers1Bulk} size={50} color="white" width={1.5} />
+                            <FeaturesContent title="Photo-Ready Spaces" subtitle="Beautifully designed spaces perfect for capturing stunning photos" />
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-7 col-sm-8">
+                        <div className="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
+                            <FeaturesIcon icon={Download1Bulk} size={50} color="white" width={1.5} />
+                            <FeaturesContent title="Pet-Friendly Rentals" subtitle="Enjoy pet-friendly rentals that are perfect for your furry friends" />
                         </div>
                     </div>
                 </div>
